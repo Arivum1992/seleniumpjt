@@ -1,0 +1,17 @@
+from selenium import webdriver
+import time
+driver=webdriver.Chrome(executable_path="C://Users//ARIVU//PycharmProjects//SeleniumTraining//Driver//chromedriver.exe")
+driver.get("https://opensource-demo.orangehrmlive.com")
+driver.find_element_by_id("txtUsername").send_keys("Admin")
+driver.find_element_by_id("txtPassword").send_keys("admin123")
+driver.find_element_by_name("Submit").click()
+#driver.find_element_by_partial_link_text("Welcome Shubham").click()
+#driver.find_element_by_id("welcome-menu")
+#driver.find_element_by_partial_link_text("Logout").click()
+driver.find_element_by_id("mainMenu")
+driver.find_element_by_partial_link_text("Performance").click()
+driver.find_element_by_partial_link_text("Employee Trackers").click()
+print("Test completed successfully")
+time.sleep(10)
+driver.close()
+driver.quit()

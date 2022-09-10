@@ -1,0 +1,12 @@
+from selenium import webdriver
+driver= webdriver.Chrome(executable_path="C:/Users/ARIVU/PycharmProjects/SeleniumTraining/Driver/chromedriver.exe")
+driver.get("https://opensource-demo.orangehrmlive.com/")
+driver.find_element_by_id("txtUsername").send_keys("Admin")
+driver.find_element_by_id("txtPassword").send_keys("admin123")
+driver.find_element_by_id("btnLogin").click()
+driver.find_element_by_id("mainMenu")
+driver.find_element_by_partial_link_text("Recruitment").click()
+driver.find_element_by_partial_link_text("Candidates").click()
+print("Test completed successfully")
+driver.close()
+driver.quit()

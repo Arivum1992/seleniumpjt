@@ -1,0 +1,12 @@
+from selenium import webdriver
+driver=webdriver.Chrome(executable_path="C://Users//ARIVU//PycharmProjects//SeleniumTraining//Driver//chromedriver.exe")
+driver.get("https://login.salesforce.com")
+driver.find_elements_by_xpath("//*[@id='username']").send_keys("arivu@gmail.com")
+driver.find_elements_by_xpath("//*[@id='password']").send_keys("123456")
+driver.find_elements_by_xpath("//*[@id='Login']").click()
+#driver.find_element_by_id("forgot_password_link?").click()
+#driver.find_element_by_link_text("Use Custom Domain").click()
+print("Test completed successfully")
+#time.sleep(10)
+driver.close()
+driver.quit()
